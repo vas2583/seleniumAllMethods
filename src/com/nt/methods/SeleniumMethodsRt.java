@@ -1,6 +1,7 @@
 package com.nt.methods;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -11,6 +12,10 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -474,6 +479,29 @@ public class SeleniumMethodsRt {
 		       ac1.keyDown(Keys.ENTER).perform();
 		       System.out.println("Login SuccessfULL");
 		       
+//Excel Data Retrive
+		       try {
+		       FileInputStream f=new FileInputStream("G:\\amazonSearch.xlsx");
+		       XSSFWorkbook wb=new XSSFWorkbook(f);
+		       XSSFSheet sh=wb.getSheet("sheet1");
+		       int totalRows=sh.getLastRowNum();
+		       System.out.println("totalRows::"+totalRows);
+		       int totalCol=sh.getRow(1).getLastCellNum();
+		       System.out.println("totalCols::"+totalCol);
+		       for(int i=1;i<=totalRows;i++) {
+		    	   XSSFRow currentRow=sh.getRow(i);
+		    	  for(int j=1;j<totalCol;j++) {
+		    		  XSSFCell cell=currentRow.getCell(j);
+		    		  String data=cell.toString();
+		    		  System.out.print(data+" ");
+		    	  }
+		    	  System.out.println();
+		        }
+		       
+		       }
+		       catch(Exception e) {
+		    	   System.out.println(e.getMessage());
+		       }
 		     
 		 
 	  }//main    	  

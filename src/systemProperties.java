@@ -1,7 +1,5 @@
 import org.apache.commons.lang3.RandomStringUtils;
 
-import net.bytebuddy.utility.RandomString;
-
 public class systemProperties {
 	public static String randomString() {
 		String generateString=RandomStringUtils.randomAlphabetic(5);

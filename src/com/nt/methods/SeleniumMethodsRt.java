@@ -156,11 +156,11 @@ public class SeleniumMethodsRt {
 		 //findElements
 		    List<WebElement> li=driver.findElements(By.tagName("a"));
 		    int count=li.size();
-		    if(count==15)
-		    	System.out.println("thre are 15 links in that page");
+		    if(count==15)System.out.println("thre are 15 links in that page");
 		    else
 		    	System.out.println("thre are"+count+" links in that page");
 		    
+		    	
 		    
 //checkBox and RADIO BUTTON
 		  driver.switchTo().window(l.get(2));
@@ -324,8 +324,8 @@ public class SeleniumMethodsRt {
 		String getYear=driver.findElement(By.xpath("//span[@class='ui-datepicker-year']")).getText();
 		  if(month.equals(getMonth)&&year.equals(getYear)) {
 			  System.out.println("Year ANd Month Selected");
-			  break;
-		             }
+			      break;
+		          }
 		  WebElement next=driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']"));
 		  		next.click();
 		  }
@@ -402,7 +402,7 @@ public class SeleniumMethodsRt {
 		     System.out.println("scroll Upto page NationTable");
 		     Thread.sleep(1000);
 		   //scrollPage Upto last
-		     js.executeScript("window.scrollBy(0,document.body.scrollhHeight)");
+		     js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		     
 		    System.out.println("scroll Upto last");
 		      Thread.sleep(1000);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]">
+  <parameter name="browser" value="edge"/>
+  <test parallel="tests" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.nit.findby.FindByAnnotation">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearUp"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.nit.findby.FindByAnnotation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

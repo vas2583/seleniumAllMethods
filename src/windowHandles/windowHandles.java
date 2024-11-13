@@ -1,7 +1,6 @@
 package windowHandles;
 
 import java.time.Duration;
-import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

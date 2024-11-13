@@ -75,5 +75,8 @@
 	<classpathentry kind="lib" path="G:/Exceljar/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/vasuk/Downloads/commons-lang3-3.13.0.jar"/>
 	<classpathentry kind="lib" path="G:/webdrivermanager-5.8.0.jar"/>
+	<classpathentry kind="lib" path="G:/testngjarFile/testng-6.8.jar"/>
+	<classpathentry kind="lib" path="G:/jcommander.jar"/>
+	<classpathentry kind="lib" path="G:/webdrivermanager-5.7.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
